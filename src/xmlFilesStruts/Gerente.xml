@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+   
+<struts>
+
+	<package name="gerente" namespace="/Gerente" extends="struts-default">
+		<!--
+			Esta action é responsável pelo upload de arquivos txt de inserção de dados
+			
+			Aceita somente arquivos com extensão .txt
+		-->
+		
+		<action name="Upload*" class="action.ActionUpload" method = "salvar{1}">
+		    <interceptor-ref name="exception"/>
+	            <interceptor-ref name="i18n"/>
+	            <interceptor-ref name="fileUpload">
+	       		<param name="allowedTypes">text/plain</param>
+	  	    </interceptor-ref> 
+	  	   	<interceptor-ref name="params">
+                <param name="excludeParams">dojo\..*,^struts\..*</param>
+            </interceptor-ref>
+            <interceptor-ref name="validation">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+            <interceptor-ref name="workflow">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+    
+		    <result name="success">/Gerente/manter{1}.jsp</result>
+			<result name="error">/Gerente/manter{1}.jsp</result>
+			<result name="input">/Gerente/manter{1}.jsp</result>
+			
+		</action>
+		
+		<!--
+			Estas actions são responsáveis por realizar as ações de CRUD para o gerente, professor e alno
+			
+			O nome da action é composto por CRUD posteriormente o usuário tratado e 
+			por último o método a ser invocado, sendo eles: Insert, Update, Delete.
+		-->
+		
+		<action name="CRUDGerente" class="action.login.ActionGerente">
+			<result name="success">/Gerente/manterGerente.jsp</result>
+			<result name="error">/Gerente/manterGerente.jsp</result>
+			<result name="input">/Gerente/manterGerente.jsp</result>
+		</action>
+		
+		<action name="CRUDAluno" class= "action.login.ActionManterAluno" >
+			<result name="success">/Gerente/manterAluno.jsp</result>
+			<result name="error">/Gerente/manterAluno.jsp</result>
+			<result name="input">/Gerente/manterAluno.jsp</result>
+		</action>
+		
+		<action name="CRUDProfessor" class= "action.login.ActionManterProfessor">
+			<result name="success">/Gerente/manterProfessor.jsp</result>
+			<result name="error">/Gerente/manterProfessor.jsp</result>
+			<result name="input">/Gerente/manterProfessor.jsp</result>
+		</action>
+		
+		<action name="CRUDDisciplina*" class= "action.CRUDAprendizagem.ActionManterDisciplina" >
+			<result name="success">/Gerente/manterDisciplina.jsp</result>
+			<result name="error">/Gerente/manterDisciplina.jsp</result>
+			<result name="input">/Gerente/manterDisciplina.jsp</result>
+		</action>
+		
+		<action name="CRUDEmenta" class= "action.CRUDAprendizagem.ActionManterEmenta" >
+			<result name="success">/Gerente/manterTopicoDeConteudo.jsp</result>
+			<result name="error">/Gerente/manterTopicoDeConteudo.jsp</result>
+			<result name="input">/Gerente/manterTopicoDeConteudo.jsp</result>
+		</action>
+		
+		<action name="CRUDTurma" class= "action.CRUDAprendizagem.ActionManterTurma" >
+			<result name="success">/Gerente/manterTurma.jsp</result>
+			<result name="error">/Gerente/manterTurma.jsp</result>
+			<result name="input">/Gerente/manterTurma.jsp</result>
+		</action>
+		
+		<action name="CRUDConteudo" class= "action.CRUDAprendizagem.ActionManterConteudo" >
+			<result name="success">/Gerente/manterConteudo.jsp</result>
+			<result name="error">/Gerente/manterConteudo.jsp</result>
+			<result name="input">/Gerente/manterConteudo.jsp</result>
+		</action>
+		
+
+		<!--
+			As action descritas a seguir são dummie action, ou seja, não possuem uma classe.
+			São utilizadas somente para fazer os links entre as páginas do sistema
+		-->
+		
+		
+		<action name="manterProfessor">
+			<result>/Gerente/manterProfessor.jsp</result>
+		</action>
+	
+		<action name="inicio">
+			<result>/Gerente/Inicio.jsp</result>
+		</action>
+		
+		<action name="manterAluno">
+			<result>/Gerente/manterAluno.jsp</result>
+		</action>
+		
+		<action name="manterDisciplina">
+			<result>/Gerente/manterDisciplina.jsp</result>
+		</action>
+		
+		<action name="manterConteudo">
+			<result>/Gerente/manterConteudo.jsp</result>
+		</action>
+		
+		<action name="manterTurma">
+			<result>/Gerente/manterTurma.jsp</result>
+		</action>
+		
+		<action name="manterGerente">
+			<result>/Gerente/manterGerente.jsp</result>
+		</action>
+		
+		<action name="manterTurma">
+			<result>/Gerente/manterTurma.jsp</result>
+		</action>
+		
+		<action name="manterTopicoConteudo">
+			<result>/Gerente/manterTopicoDeConteudo.jsp</result>
+		</action>
+	
+	</package>
+	
+	
+	<!--
+			O pacote a seguir trata as pesquisas 
+		
+		-->
+		
+	<package name="pesquisar" namespace="/Gerente/Pesquisar" extends="json-default">
+	
+	
+		<action name="pesquisarTodosAluno" class="action.login.ActionPesquisarAluno" method = "pesquisarTodos">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarTodosTurma" class="action.CRUDAprendizagem.ActionPesquisarTurma">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarTodosEmenta" class="action.CRUDAprendizagem.ActionPesquisarEmenta">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarEmentaDisciplina" class="action.CRUDAprendizagem.ActionPesquisarEmenta" method = "pesquisarPorDisciplina">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarTodosDisciplina" class="action.CRUDAprendizagem.ActionPesquisarDisciplina" method = "pesquisarTodos">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarTodosConteudo" class="action.CRUDAprendizagem.ActionPesquisarConteudo">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarConteudoEmenta" class="action.CRUDAprendizagem.ActionPesquisarConteudo" method = "pesquisarPorEmenta">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarTodosProfessor" class="action.login.ActionPesquisarProfessor" method = "buscarTodos">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="pesquisarTodosGerente" class="action.login.ActionPesquisarGerente" method = "pesquisarTodos">
+			<result type="json" ></result>
+		</action>
+		
+	
+	</package> 
+	
+	
+</struts>
+   
+
+
+

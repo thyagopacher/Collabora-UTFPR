@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.action.excludePattern" value="/websocket/.*" />
+	<constant name="struts.enable.SlashesInActionNames" value="true"/>
+	<constant name="struts.mapper.alwaysSelectFullNamespace" value="false"/>
+	<!-- <constant name="struts.multipart.maxSize" value="1000000" /> -->
+
+	<include file="xmlFilesStruts/index.xml"></include>
+	<include file="xmlFilesStruts/Gerente.xml"></include>
+	<include file="xmlFilesStruts/Professor.xml"></include>
+	<include file="xmlFilesStruts/Aluno.xml"></include>
+
+</struts>

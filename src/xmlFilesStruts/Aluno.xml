@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="aluno" namespace="/Aluno" extends="struts-default">
+
+		<action name="iniciarAtividade/*"
+			class="br.com.collabora.aluno.chat.IniciarAtividadeAction">
+			<param name="idAtividade">{1}</param>
+			<result name="success">/Aluno/chat.jsp</result>
+			<result name="error">/Aluno/Inicio.jsp</result>
+		</action>
+
+		<action name="redirecionarSemMinAlunos"
+			class="br.com.collabora.aluno.chat.RedirecionarSemMinAlunosAction">
+			<result name="success">/Aluno/Inicio.jsp</result>
+		</action>
+
+		<action name="redirecionarSemMinAlunos"
+			class="br.com.collabora.aluno.chat.RedirecionarSemMinAlunosAction">
+			<result name="success">/Aluno/Inicio.jsp</result>
+		</action>
+
+		<action name="uploadArquivo" class="br.com.collabora.aluno.chat.UploadArquivoAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">*/*</param>
+				<param name="maximumSize">16777216</param> <!-- 16MB -->
+			</interceptor-ref>
+
+			<interceptor-ref name="staticParams" />
+			<interceptor-ref name="params" />
+			<interceptor-ref name="validation" />
+			<interceptor-ref name="workflow" />
+			<result name="success">/Aluno/chat.jsp</result>
+			<result name="input">/Aluno/chat.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="pesquisar.aluno" namespace="/Aluno/Pesquisar"
+		extends="json-default">
+
+		<action name="pesquisarHistoricoAtividadesAluno"
+			class="br.com.collabora.action.aluno.PesquisarHistoricoAtividadesAction">
+			<result type="json"></result>
+		</action>
+
+		<action name="obterIdSessaoAluno"
+			class="br.com.collabora.action.aluno.ObterIdSessaoAlunoAction">
+			<result type="json"></result>
+		</action>
+
+		<action name="pesquisarAtividadesAbertasAluno"
+			class="br.com.collabora.action.aluno.PesquisarAtividadesAbertasAction">
+			<result type="json"></result>
+		</action>
+
+
+	</package>
+
+
+</struts>
+   
+
+
+

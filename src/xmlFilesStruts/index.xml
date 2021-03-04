@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="Index" namespace="/" extends="struts-default">
+
+		<action name="acessar">
+			<result>Login.jsp</result>
+		</action>
+
+
+		<action name="Login" class="action.login.ActionLogin">
+			<result name="gerente">/Gerente/Inicio.jsp</result>
+			<result name="professor">/Professor/Inicio.jsp</result>
+			<result name="aluno">/Aluno/Inicio.jsp</result>
+			<result name="input">Login.jsp</result>
+			<result name="error">Login.jsp</result>
+		</action>
+
+		<action name="Perfil">
+			<result>/perfil.jsp</result>
+		</action>
+
+		<action name="Descricao">
+			<result>/descricao.jsp</result>
+		</action>
+
+		<action name="Contato">
+			<result>/contato.jsp</result>
+		</action>
+
+		<action name="Sair">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+
+</struts>
+

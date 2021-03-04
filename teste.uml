@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_VVyJ0EU1Eea3WKQuLVO5BA" name="RootElement">
+  <packagedElement xmi:type="uml:Model" xmi:id="_jkzNQEU1Eea3WKQuLVO5BA" name="generated">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jk-MYEU1Eea3WKQuLVO5BA" name="businessService">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jk-zcEU1Eea3WKQuLVO5BA" name="CRUDAprendizagem">
+        <packagedElement xmi:type="uml:Package" xmi:id="_jk-zcUU1Eea3WKQuLVO5BA" name="manterEmenta">
+          <packagedElement xmi:type="uml:Class" xmi:id="_jlGIMEU1Eea3WKQuLVO5BA" name="ManterEmenta" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_jlVYwEU1Eea3WKQuLVO5BA" name="query" visibility="private" type="_jlUxsEU1Eea3WKQuLVO5BA" isUnique="false"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jlIkcEU1Eea3WKQuLVO5BA" name="ManterEmenta implements IMantEmenta" client="_jlGIMEU1Eea3WKQuLVO5BA" supplier="_jlH9YEU1Eea3WKQuLVO5BA" contract="_jlH9YEU1Eea3WKQuLVO5BA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jlKZoUU1Eea3WKQuLVO5BA" name="ManterEmenta implements IPersistencia" client="_jlGIMEU1Eea3WKQuLVO5BA" supplier="_jlKZoEU1Eea3WKQuLVO5BA" contract="_jlKZoEU1Eea3WKQuLVO5BA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jlP5MEU1Eea3WKQuLVO5BA" name="ManterEmenta implements IPesquisarDisciplina" client="_jlGIMEU1Eea3WKQuLVO5BA" supplier="_jlPSIEU1Eea3WKQuLVO5BA" contract="_jlPSIEU1Eea3WKQuLVO5BA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_jlSVcEU1Eea3WKQuLVO5BA" name="ManterEmenta implements IPesquisarEmenta" client="_jlGIMEU1Eea3WKQuLVO5BA" supplier="_jlRuYEU1Eea3WKQuLVO5BA" contract="_jlRuYEU1Eea3WKQuLVO5BA"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jlZDIEU1Eea3WKQuLVO5BA" name="inserir" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jlbfYEU1Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jlcGcEU1Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jlctgEU1Eea3WKQuLVO5BA" name="modificar" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jldUkEU1Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jldUkUU1Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jld7oEU1Eea3WKQuLVO5BA" name="remover" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jleisEU1Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jlfJwEU1Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_jlH9YEU1Eea3WKQuLVO5BA" name="IMantEmenta"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_jlOEAEU1Eea3WKQuLVO5BA" name="pesquisarDisciplina">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_jlPSIEU1Eea3WKQuLVO5BA" name="IPesquisarDisciplina"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_jlRHUEU1Eea3WKQuLVO5BA" name="pesquisaEmenta">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_jlRuYEU1Eea3WKQuLVO5BA" name="IPesquisarEmenta"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_jlJLgEU1Eea3WKQuLVO5BA" name="dbConnection">
+        <packagedElement xmi:type="uml:Package" xmi:id="_jlJykEU1Eea3WKQuLVO5BA" name="persistencia">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_jlKZoEU1Eea3WKQuLVO5BA" name="IPersistencia"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jlXN8EU1Eea3WKQuLVO5BA" name="modelObjects">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jlYcEEU1Eea3WKQuLVO5BA" name="Ementa"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_jlTjkEU1Eea3WKQuLVO5BA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jlTjkUU1Eea3WKQuLVO5BA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_jlUKoEU1Eea3WKQuLVO5BA" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_jlUxsEU1Eea3WKQuLVO5BA" name="String"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_jlaRQEU1Eea3WKQuLVO5BA" name="datatype">
+    <packagedElement xmi:type="uml:Package" xmi:id="_jlaRQUU1Eea3WKQuLVO5BA" name="datatype">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jla4UEU1Eea3WKQuLVO5BA" name="Boolean"/>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_C5uBsEU2Eea3WKQuLVO5BA" name="Long"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_OkjRIEU2Eea3WKQuLVO5BA" name="src">
+    <packagedElement xmi:type="uml:Package" xmi:id="_OknikEU2Eea3WKQuLVO5BA" name="businessService">
+      <packagedElement xmi:type="uml:Package" xmi:id="_OknikUU2Eea3WKQuLVO5BA" name="CRUDAprendizagem">
+        <packagedElement xmi:type="uml:Package" xmi:id="_OkoJoEU2Eea3WKQuLVO5BA" name="manterEmenta">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Okp-0EU2Eea3WKQuLVO5BA" name="IMantEmenta" visibility="public">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_a5rlUEU3Eea3WKQuLVO5BA" name="inserir" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_a5tagEU3Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_a5uBkEU3Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_a5uooEU3Eea3WKQuLVO5BA" name="modificar" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_a5vPsEU3Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_a5v2wEU3Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_a5wd0EU3Eea3WKQuLVO5BA" name="remover" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_a5xE4EU3Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_a5xr8EU3Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_kYYw4EU2Eea3WKQuLVO5BA" name="ManterEmenta" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_kYamEUU2Eea3WKQuLVO5BA" name="query" visibility="private" type="_jlUxsEU1Eea3WKQuLVO5BA" isUnique="false"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kYZ_AEU2Eea3WKQuLVO5BA" name="ManterEmenta implements IMantEmenta" client="_kYYw4EU2Eea3WKQuLVO5BA" supplier="_Okp-0EU2Eea3WKQuLVO5BA" contract="_Okp-0EU2Eea3WKQuLVO5BA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kYZ_AUU2Eea3WKQuLVO5BA" name="ManterEmenta implements IPersistencia" client="_kYYw4EU2Eea3WKQuLVO5BA" supplier="_jlKZoEU1Eea3WKQuLVO5BA" contract="_jlKZoEU1Eea3WKQuLVO5BA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kYZ_AkU2Eea3WKQuLVO5BA" name="ManterEmenta implements IPesquisarDisciplina" client="_kYYw4EU2Eea3WKQuLVO5BA" supplier="_jlPSIEU1Eea3WKQuLVO5BA" contract="_jlPSIEU1Eea3WKQuLVO5BA"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_kYamEEU2Eea3WKQuLVO5BA" name="ManterEmenta implements IPesquisarEmenta" client="_kYYw4EU2Eea3WKQuLVO5BA" supplier="_jlRuYEU1Eea3WKQuLVO5BA" contract="_jlRuYEU1Eea3WKQuLVO5BA"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kYbNIEU2Eea3WKQuLVO5BA" name="inserir" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYbNIUU2Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYb0MEU2Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kYb0MUU2Eea3WKQuLVO5BA" name="modificar" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYb0MkU2Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYcbQEU2Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_kYcbQUU2Eea3WKQuLVO5BA" name="remover" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYcbQkU2Eea3WKQuLVO5BA" type="_jla4UEU1Eea3WKQuLVO5BA" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_kYdCUEU2Eea3WKQuLVO5BA" name="ementa" type="_jlYcEEU1Eea3WKQuLVO5BA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_eXiMQEU3Eea3WKQuLVO5BA" name="IManterEmenta" visibility="public">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_eXjaYEU3Eea3WKQuLVO5BA" name="mantEmenta" type="_kYYw4EU2Eea3WKQuLVO5BA" isUnique="false"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

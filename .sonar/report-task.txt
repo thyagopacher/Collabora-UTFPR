@@ -1,0 +1,5 @@
+projectKey=br-com-collabora
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/br-com-collabora
+ceTaskId=AViTLLc6hHO1-ZGMY-Gy
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AViTLLc6hHO1-ZGMY-Gy

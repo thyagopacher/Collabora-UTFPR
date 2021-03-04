@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_GPThEETAEeauOeDMIlgxLw" name="RootElement">
+  <packagedElement xmi:type="uml:Model" xmi:id="_ThmdkETAEeauOeDMIlgxLw" name="src">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ti2awETAEeauOeDMIlgxLw" name="action">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Tj1SMETAEeauOeDMIlgxLw" name="ActionUpload" visibility="public">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Tj5joETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TkVogETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_TkW2oETAEeauOeDMIlgxLw">
+            <body>&#xD;
+	 * &#xD;
+	 </body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TkYEwUTAEeauOeDMIlgxLw" name="fileUpload" visibility="private" type="_TkYEwETAEeauOeDMIlgxLw" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TkZS4UTAEeauOeDMIlgxLw" name="fileUploadContentType" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TkZ58ETAEeauOeDMIlgxLw" name="fileUploadFileName" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TkahAETAEeauOeDMIlgxLw" name="destPath" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TkGX8ETAEeauOeDMIlgxLw" name="ActionUpload implements IArquivoDeDados" client="_Tj1SMETAEeauOeDMIlgxLw" supplier="_Tj_DMETAEeauOeDMIlgxLw" contract="_Tj_DMETAEeauOeDMIlgxLw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TkHmEETAEeauOeDMIlgxLw" name="ActionUpload implements ISalvarDados" client="_Tj1SMETAEeauOeDMIlgxLw" supplier="_TkG_AUTAEeauOeDMIlgxLw" contract="_TkG_AUTAEeauOeDMIlgxLw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tkk5EETAEeauOeDMIlgxLw" name="execute" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tkv4METAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TkwfQETAEeauOeDMIlgxLw" name="salvarAluno" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TkxGUETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TkxGUUTAEeauOeDMIlgxLw" name="salvarProfessor" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TkxtYETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TkyUcETAEeauOeDMIlgxLw" name="salvarGerente" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TkyUcUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_TkzikETAEeauOeDMIlgxLw" name="copiarArquivo" visibility="private">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_TkzikUTAEeauOeDMIlgxLw" type="_TkYEwETAEeauOeDMIlgxLw" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk0wsETAEeauOeDMIlgxLw" name="destino" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk0wsUTAEeauOeDMIlgxLw" name="getDestPath" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk1XwETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk1-0ETAEeauOeDMIlgxLw" name="setDestPath" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk1-0UTAEeauOeDMIlgxLw" name="destPath" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk2l4ETAEeauOeDMIlgxLw" name="getFileUploadContentType" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk3M8ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk30AETAEeauOeDMIlgxLw" name="setFileUploadContentType" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk4bEETAEeauOeDMIlgxLw" name="fileUploadContentType" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk4bEUTAEeauOeDMIlgxLw" name="getFileUploadFileName" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk5CIETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk5pMETAEeauOeDMIlgxLw" name="setFileUploadFileName" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk6QQETAEeauOeDMIlgxLw" name="fileUploadFileName" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk63UETAEeauOeDMIlgxLw" name="getFileUpload" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk7eYETAEeauOeDMIlgxLw" type="_TkYEwETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Tk8FcETAEeauOeDMIlgxLw" name="setFileUpload" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tk8sgETAEeauOeDMIlgxLw" name="fileUpload" type="_TkYEwETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TlTR0ETAEeauOeDMIlgxLw" name="CRUDAprendizagem">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TlVHAETAEeauOeDMIlgxLw" name="ActionManterDisciplina" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_TlVuEETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TlYxYETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TlZYcETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TlamkUTAEeauOeDMIlgxLw" name="disciplina" visibility="private" type="_TlamkETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TlW8METAEeauOeDMIlgxLw" name="ActionManterDisciplina implements ModelDriven" client="_TlVHAETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TlYKUUTAEeauOeDMIlgxLw" name="ActionManterDisciplina implements IManterDisciplina" client="_TlVHAETAEeauOeDMIlgxLw" supplier="_TlYKUETAEeauOeDMIlgxLw" contract="_TlYKUETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TlbNoETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tlb0sETAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tlb0sUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tlb0skTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TlcbwETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TlcbwUTAEeauOeDMIlgxLw" name="Update" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TldC0ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TldC0UTAEeauOeDMIlgxLw" name="Clean" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TldC0kTAEeauOeDMIlgxLw" name="getDisciplina" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tldp4ETAEeauOeDMIlgxLw" type="_TlamkETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tldp4UTAEeauOeDMIlgxLw" name="setDisciplina" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TleQ8ETAEeauOeDMIlgxLw" name="disciplina" type="_TlamkETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TleQ8UTAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tle4AETAEeauOeDMIlgxLw" type="_TlamkETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TlopAETAEeauOeDMIlgxLw" name="ActionManterTurma" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_TlopAUTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tlp3IUTAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TlqeMETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TlrFQUTAEeauOeDMIlgxLw" name="turma" visibility="private" type="_TlrFQETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TlpQEUTAEeauOeDMIlgxLw" name="ActionManterTurma implements IManterTurma" client="_TlopAETAEeauOeDMIlgxLw" supplier="_TlpQEETAEeauOeDMIlgxLw" contract="_TlpQEETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Tlp3IETAEeauOeDMIlgxLw" name="ActionManterTurma implements ModelDriven" client="_TlopAETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TlrsUETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TlrsUUTAEeauOeDMIlgxLw" name="getTurma" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TlsTYETAEeauOeDMIlgxLw" type="_TlrFQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tls6cETAEeauOeDMIlgxLw" name="setTurma" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tls6cUTAEeauOeDMIlgxLw" name="turma" type="_TlrFQETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TlthgETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TluIkETAEeauOeDMIlgxLw" type="_TlrFQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Tl6V0ETAEeauOeDMIlgxLw" name="ActionPesquisarDisciplina" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_Tl684ETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tl7j8UTAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_Tl8LAETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tl8yEETAEeauOeDMIlgxLw" name="records" visibility="private" type="_TlamkETAEeauOeDMIlgxLw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TmEt4ETAEeauOeDMIlgxLw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TmF8AETAEeauOeDMIlgxLw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmGjEETAEeauOeDMIlgxLw" name="result" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Tl7j8ETAEeauOeDMIlgxLw" name="ActionPesquisarDisciplina implements IPesquisarDisciplina" client="_Tl6V0ETAEeauOeDMIlgxLw" supplier="_Tl684kTAEeauOeDMIlgxLw" contract="_Tl684kTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmHKIETAEeauOeDMIlgxLw" name="pesquisarTodos" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmHKIUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmHxMETAEeauOeDMIlgxLw" name="getResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmHxMUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmHxMkTAEeauOeDMIlgxLw" name="setResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmIYQETAEeauOeDMIlgxLw" name="result" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmIYQUTAEeauOeDMIlgxLw" name="getRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmI_UETAEeauOeDMIlgxLw" type="_TlamkETAEeauOeDMIlgxLw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TmI_UUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TmJmYETAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmJmYUTAEeauOeDMIlgxLw" name="setRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmKNcETAEeauOeDMIlgxLw" name="records" type="_TlamkETAEeauOeDMIlgxLw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TmKNcUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TmK0gETAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TmNQwETAEeauOeDMIlgxLw" name="login">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TmOe4ETAEeauOeDMIlgxLw" name="ActionGerente" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_TmPF8ETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmQUEETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmQ7IUTAEeauOeDMIlgxLw" name="gerente" visibility="private" type="_TmQ7IETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmRiMETAEeauOeDMIlgxLw" name="confirmacao" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmSJQETAEeauOeDMIlgxLw" name="button" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TmPF8UTAEeauOeDMIlgxLw" name="ActionGerente implements ModelDriven" client="_TmOe4ETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TmPtAkTAEeauOeDMIlgxLw" name="ActionGerente implements IGerenciarGerente" client="_TmOe4ETAEeauOeDMIlgxLw" supplier="_TmPtAUTAEeauOeDMIlgxLw" contract="_TmPtAUTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmSJQUTAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmSJQkTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmSwUETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmSwUUTAEeauOeDMIlgxLw" name="Update" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmSwUkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmTXYETAEeauOeDMIlgxLw" name="Delete" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmT-cETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmT-cUTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmUlgETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmUlgUTAEeauOeDMIlgxLw" name="Clean" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmVzoETAEeauOeDMIlgxLw" name="getGerente" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmWasETAEeauOeDMIlgxLw" type="_TmQ7IETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmWasUTAEeauOeDMIlgxLw" name="setGerente" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmXBwETAEeauOeDMIlgxLw" name="gerente" type="_TmQ7IETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmXo0ETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmXo0UTAEeauOeDMIlgxLw" type="_TmQ7IETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmYP4ETAEeauOeDMIlgxLw" name="getConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmYP4UTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmY28ETAEeauOeDMIlgxLw" name="setConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmY28UTAEeauOeDMIlgxLw" name="confirmacao" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmZeAETAEeauOeDMIlgxLw" name="getButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmZeAUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmaFEETAEeauOeDMIlgxLw" name="setButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmasIETAEeauOeDMIlgxLw" name="button" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Tmin8ETAEeauOeDMIlgxLw" name="ActionLogin" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_TmjPAETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmlEMETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TmlEMUTAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmlrQUTAEeauOeDMIlgxLw" name="user" visibility="private" type="_TmlrQETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TmjPAUTAEeauOeDMIlgxLw" name="ActionLogin implements ModelDriven" client="_Tmin8ETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TmkdIETAEeauOeDMIlgxLw" name="ActionLogin implements ILogar" client="_Tmin8ETAEeauOeDMIlgxLw" supplier="_Tmj2EUTAEeauOeDMIlgxLw" contract="_Tmj2EUTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmmSUETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmmSUUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmmSUkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tmm5YETAEeauOeDMIlgxLw" name="getUser" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tmm5YUTAEeauOeDMIlgxLw" type="_TmlrQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmngcETAEeauOeDMIlgxLw" name="setUser" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmoHgETAEeauOeDMIlgxLw" name="user" type="_TmlrQETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmoHgUTAEeauOeDMIlgxLw" name="LimparUser" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TmoukETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TmoukUTAEeauOeDMIlgxLw" type="_TmlrQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TmxRcETAEeauOeDMIlgxLw" name="ActionManterAluno" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_Tmx4gETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TmztsETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TmztsUTAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tm2xAETAEeauOeDMIlgxLw" name="aluno" visibility="private" type="_Tm0UwETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tm3YEETAEeauOeDMIlgxLw" name="confirmacao" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tm3_IETAEeauOeDMIlgxLw" name="button" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TmyfkETAEeauOeDMIlgxLw" name="ActionManterAluno implements ModelDriven" client="_TmxRcETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TmzGoUTAEeauOeDMIlgxLw" name="ActionManterAluno implements IManterAluno" client="_TmxRcETAEeauOeDMIlgxLw" supplier="_TmzGoETAEeauOeDMIlgxLw" contract="_TmzGoETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm3_IUTAEeauOeDMIlgxLw" name="getButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm4mMETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm4mMUTAEeauOeDMIlgxLw" name="setButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm5NQETAEeauOeDMIlgxLw" name="button" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm50UETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm50UUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm6bYETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm6bYUTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm7CcETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm7CcUTAEeauOeDMIlgxLw" name="Update" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm7CckTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm7pgETAEeauOeDMIlgxLw" name="Delete" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm7pgUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm8QkETAEeauOeDMIlgxLw" name="Clean" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm8QkUTAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm8QkkTAEeauOeDMIlgxLw" type="_Tm0UwETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm83oETAEeauOeDMIlgxLw" name="getAluno" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm83oUTAEeauOeDMIlgxLw" type="_Tm0UwETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm9esETAEeauOeDMIlgxLw" name="setAluno" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm-FwETAEeauOeDMIlgxLw" name="aluno" type="_Tm0UwETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm-s0ETAEeauOeDMIlgxLw" name="getConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm-s0UTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tm_T4ETAEeauOeDMIlgxLw" name="setConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tm_T4UTAEeauOeDMIlgxLw" name="confirmacao" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TnOkcETAEeauOeDMIlgxLw" name="ActionManterProfessor" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_TnPLgETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TnQZoETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TnRAsETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TnRnwETAEeauOeDMIlgxLw" name="professor" visibility="private" type="_TnRAsUTAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TnRnwUTAEeauOeDMIlgxLw" name="confirmacao" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TnSO0ETAEeauOeDMIlgxLw" name="button" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TnPLgUTAEeauOeDMIlgxLw" name="ActionManterProfessor implements ModelDriven" client="_TnOkcETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TnPykkTAEeauOeDMIlgxLw" name="ActionManterProfessor implements IManterProfessor" client="_TnOkcETAEeauOeDMIlgxLw" supplier="_TnPykUTAEeauOeDMIlgxLw" contract="_TnPykUTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnSO0UTAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnS14ETAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnS14UTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnS14kTAEeauOeDMIlgxLw" name="Delete" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnTc8ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnTc8UTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnTc8kTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnUEAETAEeauOeDMIlgxLw" name="Update" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnUEAUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnUrEETAEeauOeDMIlgxLw" name="Clean" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnUrEUTAEeauOeDMIlgxLw" name="getConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnUrEkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnVSIETAEeauOeDMIlgxLw" name="setConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnVSIUTAEeauOeDMIlgxLw" name="confirmacao" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnV5METAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnV5MUTAEeauOeDMIlgxLw" type="_TnRAsUTAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnWgQETAEeauOeDMIlgxLw" name="getProfessor" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnWgQUTAEeauOeDMIlgxLw" type="_TnRAsUTAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnXHUETAEeauOeDMIlgxLw" name="setProfessor" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnXuYETAEeauOeDMIlgxLw" name="professor" type="_TnRAsUTAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnXuYUTAEeauOeDMIlgxLw" name="getSerialversionuid" visibility="public" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnYVcETAEeauOeDMIlgxLw" type="_TkNFoETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnY8gETAEeauOeDMIlgxLw" name="getButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnY8gUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnY8gkTAEeauOeDMIlgxLw" name="setButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnZjkETAEeauOeDMIlgxLw" name="button" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_TnlJwETAEeauOeDMIlgxLw" name="ActionPesquisarAluno" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_TnlJwUTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tnm-8ETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TnnmAETAEeauOeDMIlgxLw" name="records" visibility="private" type="_Tm0UwETAEeauOeDMIlgxLw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TnoNEETAEeauOeDMIlgxLw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TnoNEUTAEeauOeDMIlgxLw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tno0IETAEeauOeDMIlgxLw" name="pesquisaNome" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_TnpbMETAEeauOeDMIlgxLw" name="result" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Tnlw0kTAEeauOeDMIlgxLw" name="ActionPesquisarAluno implements IPesquisarAluno" client="_TnlJwETAEeauOeDMIlgxLw" supplier="_Tnlw0UTAEeauOeDMIlgxLw" contract="_Tnlw0UTAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_TnmX4kTAEeauOeDMIlgxLw" name="ActionPesquisarAluno implements IPesquisarConjuntoAluno" client="_TnlJwETAEeauOeDMIlgxLw" supplier="_TnmX4UTAEeauOeDMIlgxLw" contract="_TnmX4UTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnpbMUTAEeauOeDMIlgxLw" name="pesquisarNome" visibility="public">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TnpbMkTAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * 		pesquisarNome&#xD;
+	 * &#xD;
+	 * 	coloca na variável record o alunos que possui o nome que esta contido em pesquisaNome&#xD;
+	 * &#xD;
+	 * @return SUCCESS se a pesquisa possuir mais de um elementos&#xD;
+	 * 			ERROR se a pesquisa não possuir elementos&#xD;
+	 </body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnqCQETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnqCQUTAEeauOeDMIlgxLw" name="pesquisarTodos" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnqCQkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnqpUETAEeauOeDMIlgxLw" name="getRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnrQYETAEeauOeDMIlgxLw" type="_Tm0UwETAEeauOeDMIlgxLw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TnrQYUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TnrQYkTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tnr3cETAEeauOeDMIlgxLw" name="setRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnsegETAEeauOeDMIlgxLw" name="alunos" type="_Tm0UwETAEeauOeDMIlgxLw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TnsegUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TnsegkTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tnseg0TAEeauOeDMIlgxLw" name="getPesquisaNome" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TntFkETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TntFkUTAEeauOeDMIlgxLw" name="setPesquisaNome" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TntsoETAEeauOeDMIlgxLw" name="pesquisaNome" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TntsoUTAEeauOeDMIlgxLw" name="getResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TntsokTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_TnuTsETAEeauOeDMIlgxLw" name="setResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_TnuTsUTAEeauOeDMIlgxLw" name="result" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Tn7IAETAEeauOeDMIlgxLw" name="ActionPesquisarGerente" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_Tn7IAUTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tn8WIETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tn89METAEeauOeDMIlgxLw" name="records" visibility="private" type="_TmQ7IETAEeauOeDMIlgxLw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tn89MUTAEeauOeDMIlgxLw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tn89MkTAEeauOeDMIlgxLw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Tn9kQETAEeauOeDMIlgxLw" name="result" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Tn7vEUTAEeauOeDMIlgxLw" name="ActionPesquisarGerente implements IProcurarGerente" client="_Tn7IAETAEeauOeDMIlgxLw" supplier="_Tn7vEETAEeauOeDMIlgxLw" contract="_Tn7vEETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tn9kQUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tn-LUETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tn-LUUTAEeauOeDMIlgxLw" name="pesquisarTodos" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tn-LUkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tn-LU0TAEeauOeDMIlgxLw" name="getRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tn-yYETAEeauOeDMIlgxLw" type="_TmQ7IETAEeauOeDMIlgxLw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tn-yYUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tn_ZcETAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tn_ZcUTAEeauOeDMIlgxLw" name="setRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ToAAgETAEeauOeDMIlgxLw" name="records" type="_TmQ7IETAEeauOeDMIlgxLw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ToAAgUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ToAnkETAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ToAnkUTAEeauOeDMIlgxLw" name="getResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ToAnkkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ToAnk0TAEeauOeDMIlgxLw" name="setResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ToBOoETAEeauOeDMIlgxLw" name="result" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Tj2gUETAEeauOeDMIlgxLw" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Tj2gUUTAEeauOeDMIlgxLw" name="opensymphony">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Tj3HYETAEeauOeDMIlgxLw" name="xwork2">
+          <packagedElement xmi:type="uml:Class" xmi:id="_Tj3HYUTAEeauOeDMIlgxLw" name="ActionSupport"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TlWVIETAEeauOeDMIlgxLw" name="ModelDriven"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Tj6KsETAEeauOeDMIlgxLw" name="businessService">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Tj6xwETAEeauOeDMIlgxLw" name="login">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Tj6xwUTAEeauOeDMIlgxLw" name="arquivoDeDados">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Tj_DMETAEeauOeDMIlgxLw" name="IArquivoDeDados"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_TkG_AETAEeauOeDMIlgxLw" name="SalvarDados">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TkG_AUTAEeauOeDMIlgxLw" name="ISalvarDados"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_TmPtAETAEeauOeDMIlgxLw" name="manterGerente">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TmPtAUTAEeauOeDMIlgxLw" name="IGerenciarGerente"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Tmj2EETAEeauOeDMIlgxLw" name="Login">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Tmj2EUTAEeauOeDMIlgxLw" name="ILogar"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_TmyfkUTAEeauOeDMIlgxLw" name="manterAluno">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TmzGoETAEeauOeDMIlgxLw" name="IManterAluno"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_TnPykETAEeauOeDMIlgxLw" name="manterProfessor">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TnPykUTAEeauOeDMIlgxLw" name="IManterProfessor"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Tnlw0ETAEeauOeDMIlgxLw" name="pesquisarAluno">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Tnlw0UTAEeauOeDMIlgxLw" name="IPesquisarAluno"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Tn7IAkTAEeauOeDMIlgxLw" name="pesquisarGerente">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Tn7vEETAEeauOeDMIlgxLw" name="IProcurarGerente"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TlXjQETAEeauOeDMIlgxLw" name="CRUDAprendizagem">
+        <packagedElement xmi:type="uml:Package" xmi:id="_TlXjQUTAEeauOeDMIlgxLw" name="manterDisciplina">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TlYKUETAEeauOeDMIlgxLw" name="IManterDisciplina"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_TlopAkTAEeauOeDMIlgxLw" name="manterTurma">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TlpQEETAEeauOeDMIlgxLw" name="IManterTurma"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_Tl684UTAEeauOeDMIlgxLw" name="pesquisarDisciplina">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_Tl684kTAEeauOeDMIlgxLw" name="IPesquisarDisciplina"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_TnmX4ETAEeauOeDMIlgxLw" name="psequisarConjuntoAluno">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_TnmX4UTAEeauOeDMIlgxLw" name="IPesquisarConjuntoAluno"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TlZ_gETAEeauOeDMIlgxLw" name="modelObjects">
+      <packagedElement xmi:type="uml:Class" xmi:id="_TlamkETAEeauOeDMIlgxLw" name="Disciplina"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TlrFQETAEeauOeDMIlgxLw" name="Turma"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TmQ7IETAEeauOeDMIlgxLw" name="Gerente"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TmlrQETAEeauOeDMIlgxLw" name="Usuario"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Tm0UwETAEeauOeDMIlgxLw" name="Aluno"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TnRAsUTAEeauOeDMIlgxLw" name="Professor"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_TkJbQETAEeauOeDMIlgxLw" name="datatype">
+    <packagedElement xmi:type="uml:Package" xmi:id="_TkJbQUTAEeauOeDMIlgxLw" name="datatype">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TkNFoETAEeauOeDMIlgxLw" name="Long"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_TkXdsETAEeauOeDMIlgxLw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_TkXdsUTAEeauOeDMIlgxLw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_TkXdskTAEeauOeDMIlgxLw" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TkYEwETAEeauOeDMIlgxLw" name="File"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TkYr0ETAEeauOeDMIlgxLw" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TkZS4ETAEeauOeDMIlgxLw" name="String"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_rvj2YETAEeauOeDMIlgxLw" name="generated">
+    <packagedElement xmi:type="uml:Package" xmi:id="_rwK6YETAEeauOeDMIlgxLw" name="action">
+      <packagedElement xmi:type="uml:Class" xmi:id="_rwPL0ETAEeauOeDMIlgxLw" name="ActionUpload" visibility="public">
+        <generalization xmi:type="uml:Generalization" xmi:id="_rwPy4ETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rwRoEETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_rwSPIETAEeauOeDMIlgxLw">
+            <body>&#xD;
+	 * &#xD;
+	 </body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rwS2METAEeauOeDMIlgxLw" name="fileUpload" visibility="private" type="_TkYEwETAEeauOeDMIlgxLw" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rwTdQETAEeauOeDMIlgxLw" name="fileUploadContentType" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rwUEUETAEeauOeDMIlgxLw" name="fileUploadFileName" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rwUEUUTAEeauOeDMIlgxLw" name="destPath" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rwPy4UTAEeauOeDMIlgxLw" name="ActionUpload implements IArquivoDeDados" client="_rwPL0ETAEeauOeDMIlgxLw" supplier="_Tj_DMETAEeauOeDMIlgxLw" contract="_Tj_DMETAEeauOeDMIlgxLw"/>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rwRBAETAEeauOeDMIlgxLw" name="ActionUpload implements ISalvarDados" client="_rwPL0ETAEeauOeDMIlgxLw" supplier="_TkG_AUTAEeauOeDMIlgxLw" contract="_TkG_AUTAEeauOeDMIlgxLw"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwUrYETAEeauOeDMIlgxLw" name="execute" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwVScETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwVScUTAEeauOeDMIlgxLw" name="salvarAluno" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwVSckTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwV5gETAEeauOeDMIlgxLw" name="salvarProfessor" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwV5gUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwWgkETAEeauOeDMIlgxLw" name="salvarGerente" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwWgkUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwXHoETAEeauOeDMIlgxLw" name="copiarArquivo" visibility="private">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwXHoUTAEeauOeDMIlgxLw" type="_TkYEwETAEeauOeDMIlgxLw" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwXusETAEeauOeDMIlgxLw" name="destino" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwYVwETAEeauOeDMIlgxLw" name="getDestPath" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwY80ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwZj4ETAEeauOeDMIlgxLw" name="setDestPath" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwaK8ETAEeauOeDMIlgxLw" name="destPath" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwdOQETAEeauOeDMIlgxLw" name="getFileUploadContentType" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwdOQUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwd1UETAEeauOeDMIlgxLw" name="setFileUploadContentType" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwecYETAEeauOeDMIlgxLw" name="fileUploadContentType" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwfDcETAEeauOeDMIlgxLw" name="getFileUploadFileName" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwfqgETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwgRkETAEeauOeDMIlgxLw" name="setFileUploadFileName" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwg4oETAEeauOeDMIlgxLw" name="fileUploadFileName" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwhfsETAEeauOeDMIlgxLw" name="getFileUpload" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwhfsUTAEeauOeDMIlgxLw" type="_TkYEwETAEeauOeDMIlgxLw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rwiGwETAEeauOeDMIlgxLw" name="setFileUpload" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwjU4ETAEeauOeDMIlgxLw" name="fileUpload" type="_TkYEwETAEeauOeDMIlgxLw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rwmYMETAEeauOeDMIlgxLw" name="CRUDAprendizagem">
+        <packagedElement xmi:type="uml:Class" xmi:id="_rwpbgETAEeauOeDMIlgxLw" name="ActionManterDisciplina" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rwpbgUTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rwqpoETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rwrQsETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rwrQsUTAEeauOeDMIlgxLw" name="disciplina" visibility="private" type="_TlamkETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rwqCkETAEeauOeDMIlgxLw" name="ActionManterDisciplina implements ModelDriven" client="_rwpbgETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rwqCkUTAEeauOeDMIlgxLw" name="ActionManterDisciplina implements IManterDisciplina" client="_rwpbgETAEeauOeDMIlgxLw" supplier="_TlYKUETAEeauOeDMIlgxLw" contract="_TlYKUETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwr3wETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwse0ETAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwse0UTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwse0kTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwtF4ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwtF4UTAEeauOeDMIlgxLw" name="Update" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwts8ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwts8UTAEeauOeDMIlgxLw" name="Clean" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwts8kTAEeauOeDMIlgxLw" name="getDisciplina" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwuUAETAEeauOeDMIlgxLw" type="_TlamkETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwuUAUTAEeauOeDMIlgxLw" name="setDisciplina" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwu7EETAEeauOeDMIlgxLw" name="disciplina" type="_TlamkETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rwviIETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rwviIUTAEeauOeDMIlgxLw" type="_TlamkETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rwzzkETAEeauOeDMIlgxLw" name="ActionManterTurma" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rw0aoETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rw1owETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rw1owUTAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rw2P0ETAEeauOeDMIlgxLw" name="turma" visibility="private" type="_TlrFQETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rw0aoUTAEeauOeDMIlgxLw" name="ActionManterTurma implements IManterTurma" client="_rwzzkETAEeauOeDMIlgxLw" supplier="_TlpQEETAEeauOeDMIlgxLw" contract="_TlpQEETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rw1BsETAEeauOeDMIlgxLw" name="ActionManterTurma implements ModelDriven" client="_rwzzkETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw2P0UTAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw224ETAEeauOeDMIlgxLw" name="getTurma" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rw224UTAEeauOeDMIlgxLw" type="_TlrFQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw3d8ETAEeauOeDMIlgxLw" name="setTurma" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rw3d8UTAEeauOeDMIlgxLw" name="turma" type="_TlrFQETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw3d8kTAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rw4FAETAEeauOeDMIlgxLw" type="_TlrFQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rw7IUETAEeauOeDMIlgxLw" name="ActionPesquisarDisciplina" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rw7vYETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rw8WcUTAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rw89gETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rw89gUTAEeauOeDMIlgxLw" name="records" visibility="private" type="_TlamkETAEeauOeDMIlgxLw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rw9kkETAEeauOeDMIlgxLw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rw9kkUTAEeauOeDMIlgxLw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rw-LoETAEeauOeDMIlgxLw" name="result" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rw8WcETAEeauOeDMIlgxLw" name="ActionPesquisarDisciplina implements IPesquisarDisciplina" client="_rw7IUETAEeauOeDMIlgxLw" supplier="_Tl684kTAEeauOeDMIlgxLw" contract="_Tl684kTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw-LoUTAEeauOeDMIlgxLw" name="pesquisarTodos" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rw-LokTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw-ysETAEeauOeDMIlgxLw" name="getResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rw-ysUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw-yskTAEeauOeDMIlgxLw" name="setResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rw_ZwETAEeauOeDMIlgxLw" name="result" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rw_ZwUTAEeauOeDMIlgxLw" name="getRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxAA0ETAEeauOeDMIlgxLw" type="_TlamkETAEeauOeDMIlgxLw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rxAA0UTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rxAA0kTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxAn4ETAEeauOeDMIlgxLw" name="setRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxBO8ETAEeauOeDMIlgxLw" name="records" type="_TlamkETAEeauOeDMIlgxLw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rxBO8UTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rxB2AETAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rxESQETAEeauOeDMIlgxLw" name="login">
+        <packagedElement xmi:type="uml:Class" xmi:id="_rxGugETAEeauOeDMIlgxLw" name="ActionGerente" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rxGugUTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxHVkUTAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxH8oETAEeauOeDMIlgxLw" name="gerente" visibility="private" type="_TmQ7IETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxIjsETAEeauOeDMIlgxLw" name="confirmacao" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxIjsUTAEeauOeDMIlgxLw" name="button" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxGugkTAEeauOeDMIlgxLw" name="ActionGerente implements ModelDriven" client="_rxGugETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxHVkETAEeauOeDMIlgxLw" name="ActionGerente implements IGerenciarGerente" client="_rxGugETAEeauOeDMIlgxLw" supplier="_TmPtAUTAEeauOeDMIlgxLw" contract="_TmPtAUTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxJKwETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxJKwUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxJx0ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxJx0UTAEeauOeDMIlgxLw" name="Update" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxJx0kTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxJx00TAEeauOeDMIlgxLw" name="Delete" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxJx1ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxKY4ETAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxKY4UTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxKY4kTAEeauOeDMIlgxLw" name="Clean" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxK_8ETAEeauOeDMIlgxLw" name="getGerente" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxK_8UTAEeauOeDMIlgxLw" type="_TmQ7IETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxK_8kTAEeauOeDMIlgxLw" name="setGerente" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxOqUETAEeauOeDMIlgxLw" name="gerente" type="_TmQ7IETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxPRYETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxP4cETAEeauOeDMIlgxLw" type="_TmQ7IETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxP4cUTAEeauOeDMIlgxLw" name="getConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxP4ckTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxQfgETAEeauOeDMIlgxLw" name="setConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxQfgUTAEeauOeDMIlgxLw" name="confirmacao" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxRGkETAEeauOeDMIlgxLw" name="getButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxRGkUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxRGkkTAEeauOeDMIlgxLw" name="setButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxRtoETAEeauOeDMIlgxLw" name="button" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rxUw8ETAEeauOeDMIlgxLw" name="ActionLogin" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rxUw8UTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxVYAkTAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rxV_EETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxV_EUTAEeauOeDMIlgxLw" name="user" visibility="private" type="_TmlrQETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxVYAETAEeauOeDMIlgxLw" name="ActionLogin implements ModelDriven" client="_rxUw8ETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxVYAUTAEeauOeDMIlgxLw" name="ActionLogin implements ILogar" client="_rxUw8ETAEeauOeDMIlgxLw" supplier="_Tmj2EUTAEeauOeDMIlgxLw" contract="_Tmj2EUTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxWmIETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxWmIUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxWmIkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxWmI0TAEeauOeDMIlgxLw" name="getUser" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxXNMETAEeauOeDMIlgxLw" type="_TmlrQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxXNMUTAEeauOeDMIlgxLw" name="setUser" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxXNMkTAEeauOeDMIlgxLw" name="user" type="_TmlrQETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxX0QETAEeauOeDMIlgxLw" name="LimparUser" visibility="private"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxYbUETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxYbUUTAEeauOeDMIlgxLw" type="_TmlrQETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rxeh8ETAEeauOeDMIlgxLw" name="ActionManterAluno" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rxeh8UTAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxfwEETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rxfwEUTAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxgXIETAEeauOeDMIlgxLw" name="aluno" visibility="private" type="_Tm0UwETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxg-METAEeauOeDMIlgxLw" name="confirmacao" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxhlQETAEeauOeDMIlgxLw" name="button" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxfJAETAEeauOeDMIlgxLw" name="ActionManterAluno implements ModelDriven" client="_rxeh8ETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxfJAUTAEeauOeDMIlgxLw" name="ActionManterAluno implements IManterAluno" client="_rxeh8ETAEeauOeDMIlgxLw" supplier="_TmzGoETAEeauOeDMIlgxLw" contract="_TmzGoETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxhlQUTAEeauOeDMIlgxLw" name="getButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxiMUETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxiMUUTAEeauOeDMIlgxLw" name="setButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxizYETAEeauOeDMIlgxLw" name="button" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxjacETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxjacUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxkBgETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxkBgUTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxkBgkTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxkokETAEeauOeDMIlgxLw" name="Update" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxkokUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxkokkTAEeauOeDMIlgxLw" name="Delete" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxlPoETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxlPoUTAEeauOeDMIlgxLw" name="Clean" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxlPokTAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxl2sETAEeauOeDMIlgxLw" type="_Tm0UwETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxl2sUTAEeauOeDMIlgxLw" name="getAluno" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxmdwETAEeauOeDMIlgxLw" type="_Tm0UwETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxmdwUTAEeauOeDMIlgxLw" name="setAluno" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxnE0ETAEeauOeDMIlgxLw" name="aluno" type="_Tm0UwETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxnE0UTAEeauOeDMIlgxLw" name="getConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxnr4ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxnr4UTAEeauOeDMIlgxLw" name="setConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxoS8ETAEeauOeDMIlgxLw" name="confirmacao" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rxtLcETAEeauOeDMIlgxLw" name="ActionManterProfessor" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rxtygETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxvAoETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rxvAoUTAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * &#xD;
+	 </body>
+            </ownedComment>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxvnsETAEeauOeDMIlgxLw" name="professor" visibility="private" type="_TnRAsUTAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxwOwETAEeauOeDMIlgxLw" name="confirmacao" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rxw10ETAEeauOeDMIlgxLw" name="button" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxtygUTAEeauOeDMIlgxLw" name="ActionManterProfessor implements ModelDriven" client="_rxtLcETAEeauOeDMIlgxLw" supplier="_TlWVIETAEeauOeDMIlgxLw" contract="_TlWVIETAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rxuZkETAEeauOeDMIlgxLw" name="ActionManterProfessor implements IManterProfessor" client="_rxtLcETAEeauOeDMIlgxLw" supplier="_TnPykUTAEeauOeDMIlgxLw" contract="_TnPykUTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxxc4ETAEeauOeDMIlgxLw" name="validate" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxxc4UTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxxc4kTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxyD8ETAEeauOeDMIlgxLw" name="Delete" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxyD8UTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxyD8kTAEeauOeDMIlgxLw" name="Insert" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxyD80TAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxyrAETAEeauOeDMIlgxLw" name="Update" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxyrAUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxyrAkTAEeauOeDMIlgxLw" name="Clean" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxyrA0TAEeauOeDMIlgxLw" name="getConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxzSEETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rxzSEUTAEeauOeDMIlgxLw" name="setConfirmacao" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rxz5IETAEeauOeDMIlgxLw" name="confirmacao" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx0gMETAEeauOeDMIlgxLw" name="getModel" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rx0gMUTAEeauOeDMIlgxLw" type="_TnRAsUTAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx0gMkTAEeauOeDMIlgxLw" name="getProfessor" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rx1HQETAEeauOeDMIlgxLw" type="_TnRAsUTAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx1uUETAEeauOeDMIlgxLw" name="setProfessor" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rx1uUUTAEeauOeDMIlgxLw" name="professor" type="_TnRAsUTAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx2VYETAEeauOeDMIlgxLw" name="getSerialversionuid" visibility="public" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rx2VYUTAEeauOeDMIlgxLw" type="_TkNFoETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx28cETAEeauOeDMIlgxLw" name="getButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rx28cUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx3jgETAEeauOeDMIlgxLw" name="setButton" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_rx4KkETAEeauOeDMIlgxLw" name="button" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rx708ETAEeauOeDMIlgxLw" name="ActionPesquisarAluno" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_rx8cAETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rx9DEETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rx-RMETAEeauOeDMIlgxLw" name="records" visibility="private" type="_Tm0UwETAEeauOeDMIlgxLw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rx-RMUTAEeauOeDMIlgxLw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rx-4QETAEeauOeDMIlgxLw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rx_fUETAEeauOeDMIlgxLw" name="pesquisaNome" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rx_fUUTAEeauOeDMIlgxLw" name="result" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rx8cAUTAEeauOeDMIlgxLw" name="ActionPesquisarAluno implements IPesquisarAluno" client="_rx708ETAEeauOeDMIlgxLw" supplier="_Tnlw0UTAEeauOeDMIlgxLw" contract="_Tnlw0UTAEeauOeDMIlgxLw"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_rx8cAkTAEeauOeDMIlgxLw" name="ActionPesquisarAluno implements IPesquisarConjuntoAluno" client="_rx708ETAEeauOeDMIlgxLw" supplier="_TnmX4UTAEeauOeDMIlgxLw" contract="_TnmX4UTAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_rx_fUkTAEeauOeDMIlgxLw" name="pesquisarNome" visibility="public">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_ryAGYETAEeauOeDMIlgxLw">
+              <body>&#xD;
+	 * 		pesquisarNome&#xD;
+	 * &#xD;
+	 * 	coloca na variável record o alunos que possui o nome que esta contido em pesquisaNome&#xD;
+	 * &#xD;
+	 * @return SUCCESS se a pesquisa possuir mais de um elementos&#xD;
+	 * 			ERROR se a pesquisa não possuir elementos&#xD;
+	 </body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryAGYUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryAGYkTAEeauOeDMIlgxLw" name="pesquisarTodos" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryAtcETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryAtcUTAEeauOeDMIlgxLw" name="getRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryBUgETAEeauOeDMIlgxLw" type="_Tm0UwETAEeauOeDMIlgxLw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryBUgUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryBUgkTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryB7kETAEeauOeDMIlgxLw" name="setRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryCioETAEeauOeDMIlgxLw" name="alunos" type="_Tm0UwETAEeauOeDMIlgxLw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryCioUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryCiokTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryDJsETAEeauOeDMIlgxLw" name="getPesquisaNome" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryDJsUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryDJskTAEeauOeDMIlgxLw" name="setPesquisaNome" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryDwwETAEeauOeDMIlgxLw" name="pesquisaNome" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryDwwUTAEeauOeDMIlgxLw" name="getResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryEX0ETAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryEX0UTAEeauOeDMIlgxLw" name="setResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryE-4ETAEeauOeDMIlgxLw" name="result" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ryICMETAEeauOeDMIlgxLw" name="ActionPesquisarGerente" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_ryIpQETAEeauOeDMIlgxLw" general="_Tj3HYUTAEeauOeDMIlgxLw"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ryJQUETAEeauOeDMIlgxLw" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" type="_TkNFoETAEeauOeDMIlgxLw" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ryJ3YETAEeauOeDMIlgxLw" name="records" visibility="private" type="_TmQ7IETAEeauOeDMIlgxLw" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryJ3YUTAEeauOeDMIlgxLw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryJ3YkTAEeauOeDMIlgxLw" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ryKecETAEeauOeDMIlgxLw" name="result" visibility="private" type="_TkZS4ETAEeauOeDMIlgxLw" isUnique="false"/>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_ryIpQUTAEeauOeDMIlgxLw" name="ActionPesquisarGerente implements IProcurarGerente" client="_ryICMETAEeauOeDMIlgxLw" supplier="_Tn7vEETAEeauOeDMIlgxLw" contract="_Tn7vEETAEeauOeDMIlgxLw"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryKecUTAEeauOeDMIlgxLw" name="execute" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryKeckTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryLFgETAEeauOeDMIlgxLw" name="pesquisarTodos" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryLFgUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryLFgkTAEeauOeDMIlgxLw" name="getRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryLskETAEeauOeDMIlgxLw" type="_TmQ7IETAEeauOeDMIlgxLw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryLskUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryLskkTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryMToETAEeauOeDMIlgxLw" name="setRecords" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryM6sETAEeauOeDMIlgxLw" name="records" type="_TmQ7IETAEeauOeDMIlgxLw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryM6sUTAEeauOeDMIlgxLw"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryM6skTAEeauOeDMIlgxLw" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryNhwETAEeauOeDMIlgxLw" name="getResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryNhwUTAEeauOeDMIlgxLw" type="_TkZS4ETAEeauOeDMIlgxLw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ryNhwkTAEeauOeDMIlgxLw" name="setResult" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryOI0ETAEeauOeDMIlgxLw" name="result" type="_TkZS4ETAEeauOeDMIlgxLw"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

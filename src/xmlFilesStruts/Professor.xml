@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+   
+<struts>
+		
+	<package name="professor" namespace="/Professor" extends="struts-default">
+	
+		<!--
+		As action descritas a seguir são dummie action, ou seja, não possuem uma classe.
+		São utilizadas somente para fazer os links entre as páginas do sistema
+		-->
+		
+		<action name="CRUDQuestao"
+			class="action.CRUDAprendizagem.ActionManterQuestao">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2097152</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/Professor/manterQuestao.jsp</result>
+			<result name="error">/Professor/manterQuestao.jsp</result>
+			<result name="input">/Professor/manterQuestao.jsp</result>
+		</action>
+		
+		
+		
+		<action name="CRUDReferencia" class="action.CRUDAprendizagem.ActionManterReferencia">
+			<result name="success">/Professor/manterReferencia.jsp</result>
+			<result name="error">/Professor/manterReferencia.jsp</result>
+			<result name="input">/Professor/manterReferencia.jsp</result>
+		</action>
+		
+		<action name="Inicio">
+			<result>/Professor/Inicio.jsp</result>
+		</action>
+		
+		<action name="manterAtividade">
+			<result>/Professor/manterAtividade.jsp</result>
+		</action>
+		
+		<action name="manterQuestao">
+			<result>/Professor/manterQuestao.jsp</result>
+		</action>
+		
+		<action name="manterGrupo">
+			<result>/Professor/manterGrupo.jsp</result>
+		</action>
+		
+<!-- 		<action name="manterGrupo" class="action.CRUDAprendizagem.ActionManterGrupo" method = "adicionarGrupo"> -->
+<!-- 			<result name="success">/Professor/manterGrupo.jsp</result> -->
+<!-- 			<result name="error">/Professor/manterGrupo.jsp</result> -->
+<!-- 			<result name="input">/Professor/manterGrupo.jsp</result> -->
+<!-- 		</action> -->
+		
+		<action name="manterReferencia">
+			<result>/Professor/manterReferencia.jsp</result>
+		</action>
+	
+	</package>	
+	
+	<!--
+			O pacote a seguir trata as pesquisas 
+		
+		-->
+		
+	<package name="pesquisarProfessor" namespace="/Professor/Pesquisar" extends="json-default">
+		
+		<action name="grupoTurma" class="action.CRUDAprendizagem.ActionPesquisarGrupo" method = "pesquisarTurma">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="questaoConteudo" class="action.CRUDAprendizagem.ActionPesquisarQuestao" method = "pesquisarPorConteudo">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="turmaDisciplina" class="action.CRUDAprendizagem.ActionPesquisarTurma" method = "pesqByDisciplina">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="referenciaQuestao" class="action.CRUDAprendizagem.ActionPesquisarReferencia" method = "pesquisarPorQuestao">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="referenciaTodas" class="action.CRUDAprendizagem.ActionPesquisarReferencia">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="atividadeTodas" class="action.CRUDAprendizagem.ActionPesquisarAtividade">
+			<result type="json" ></result>
+		</action>
+		
+		<action name="alunoPorTurma" class="action.login.ActionPesquisarAluno" method= "pesquisarTurma">
+			<result type="json" ></result>
+		</action>
+	</package>
+
+
+</struts>
